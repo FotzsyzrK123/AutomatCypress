@@ -48,7 +48,7 @@ describe('Test Application Form on Job Offer Page', () => {
 
         cy.get('input[type="file"][name="attachment"]').attachFile("KrzysztofKoskaCVITEng.pdf");
 
-        cy.contains('Apply').should('exist').click();
+        cy.get('button[type="submit"][name="apply_button"]').should('be.visible').click();
         // Wyświetlenie w konsoli, że wszystkie wymagane teksty zostały znalezione i pole zostało wypełnione
         cy.log('Pole imienia zostało wypełnione tekstem: Krzysztof Kośka');
     });
